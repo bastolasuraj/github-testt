@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 8px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput">
+        <button onclick="sayHello()">Say Hello</button>
+    </div>
+
+    <script>
+        function sayHello() {
+            var name = document.getElementById('nameInput').value;
+            if (name.trim() !== '') {
+                alert('Hello, ' + name + '!');
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+    </script>
+</body>
+
+</html>
